@@ -1,5 +1,4 @@
 -- Where i set my custom keybindings
--- AMOGUS
 
 local map = vim.api.nvim_set_keymap
 

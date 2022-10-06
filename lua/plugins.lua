@@ -18,6 +18,9 @@ return require('packer').startup(function(use)
 	-- LSP server
 	use 'neovim/nvim-lspconfig'
 
+	-- Mason Packager for LSP Servers
+	use 'williamboman/mason.nvim'
+
 	-- CMP
 	use 'hrsh7th/nvim-cmp'			-- Core of auto completion Plugin
 	use 'hrsh7th/cmp-buffer'		-- Buffer completions
@@ -29,13 +32,13 @@ return require('packer').startup(function(use)
 	use 'L3MON4D3/LuaSnip'			-- Snippet engine built on lua
 	use 'saadparwaiz1/cmp_luasnip'	-- Snippet completions for cmp
 
-	-- Mason Packager for LSP Servers
-	use 'williamboman/mason.nvim'
+    -- Indent lines
+    use 'lukas-reineke/indent-blankline.nvim'
 
 	-- Colorizer
 	use 'norcalli/nvim-colorizer.lua'
 
-	-- Colorschemes
+	-- Colorscheme
 	use 'cocopon/iceberg.vim'
 
 end)

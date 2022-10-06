@@ -1,0 +1,28 @@
+local set = vim.opt
+
+----------------------------
+
+-- Tab behaviour
+set.tabstop = 4
+set.shiftwidth = 4
+set.softtabstop = 4
+set.expandtab = false
+
+-- Know position of cursor always
+set.ruler = true
+
+-- Show relative number
+set.relativenumber = true
+
+-- Colorscheme
+set.termguicolors = true
+vim.cmd('colorscheme iceberg ')
+
+-- Minimum pane width for windows.nvim plugin
+set.winwidth = 15
+set.winminwidth = 15
+set.equalalways = false
+
+
+-- Makes clipboard use the +/* register automatically
+set.clipboard = 'unnamedplus'
