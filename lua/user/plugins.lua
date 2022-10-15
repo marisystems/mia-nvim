@@ -10,6 +10,9 @@ return require('packer').startup(function(use)
 		"anuvyklack/animation.nvim"}
 	}
 	
+	-- Terminal emulator
+	use 'akinsho/toggleterm.nvim'
+
 	-- Telescope
 	use {'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	requires = {'nvim-lua/plenary.nvim'} }

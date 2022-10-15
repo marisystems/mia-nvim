@@ -1,13 +1,14 @@
 -- INIT LUA
 
-require('settings')
-require('keybindings')
-require('plugins')
+require('user.settings')
+require('user.keybindings')
+require('user.plugins')
 
-require('LSP')
-require('CMP')
-require('General/mason-config')
+require('user.lsp')
+require('user.cmp')
+require('user.mason')
 
-require('General/windows-config')
-require('General/colorizer-config')
-require('General/indent_blankline-config')
+require('user.windows')
+require('user.colorizer')
+require('user.indent')
+require('user.toggleterm')
