@@ -1,4 +1,5 @@
 local cmp = require'cmp'
+local lspkind = require'lspkind'
 
 cmp.setup({
 
@@ -28,10 +29,14 @@ cmp.setup({
 	}),
 
 	-- Configure the formatting of the cmp pop_up window
---	formatting = {
---		fields = { "kind", "abbr", "menu" },
---	}
-	
+	formatting = ({
+		format = lspkind.cmp_format({
+		mode = 'symbol',
+		maxwidth = 50,
+		ellipsis_char = '...',
+		}),
+	}),
+
 	-- Set the sources for cmp
 	sources = cmp.config.sources({
 		{ name = 'nvim_lua' },

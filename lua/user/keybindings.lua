@@ -1,4 +1,4 @@
--- Where i set my custom keybindings
+	-- Where i set my custom keybindings
 
 local map = vim.api.nvim_set_keymap
 
@@ -34,3 +34,10 @@ map('n', '<S-Up>', ':wincmd K<cr>', {})
 map('n', '<S-Down>', ':wincmd J<cr>', {})
 map('n', '<S-Left>', ':wincmd H<cr>', {})
 map('n', '<S-Right>', ':wincmd L<cr>', {})
+
+-- Jump between diagnostic warnings/errors
+map('n', '<leader>+', ':lua vim.diagnostic.goto_next()<cr>', {})
+map('n', '<leader>-', ':lua vim.diagnostic.goto_prev()<cr>', {})
+
+-- Mason
+map('n', '<leader>m', ':Mason<cr>', {})

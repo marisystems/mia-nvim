@@ -23,6 +23,10 @@ set.winwidth = 15
 set.winminwidth = 15
 set.equalalways = false
 
-
 -- Makes clipboard use the +/* register automatically
 set.clipboard = 'unnamedplus'
+
+-- Disable diagnostic virtual text
+vim.diagnostic.config({
+	virtual_text = false
+})

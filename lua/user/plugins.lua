@@ -35,8 +35,13 @@ return require('packer').startup(function(use)
 	use 'L3MON4D3/LuaSnip'			-- Snippet engine built on lua
 	use 'saadparwaiz1/cmp_luasnip'	-- Snippet completions for cmp
 
+	use 'onsails/lspkind.nvim'		-- Icons for the completion types
+
     -- Indent lines
     use 'lukas-reineke/indent-blankline.nvim'
+
+	-- Auto close tags html
+	use 'windwp/nvim-ts-autotag'
 
 	-- Colorizer
 	use 'norcalli/nvim-colorizer.lua'

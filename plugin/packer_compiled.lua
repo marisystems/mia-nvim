@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/aeron/.local/share/nvim/site/pack/packer/start/iceberg.vim",
     url = "https://github.com/cocopon/iceberg.vim"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/aeron/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/aeron/.local/share/nvim/site/pack/packer/start/mason.nvim",
@@ -163,6 +168,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/aeron/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/home/aeron/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["windows.nvim"] = {
     loaded = true,
