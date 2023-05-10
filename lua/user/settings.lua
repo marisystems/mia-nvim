@@ -16,7 +16,7 @@ set.relativenumber = true
 
 -- Colorscheme
 set.termguicolors = true
-vim.cmd('colorscheme iceberg ')
+vim.cmd('colorscheme kanagawa ')
 
 -- Minimum pane width for windows.nvim plugin
 set.winwidth = 15
@@ -30,3 +30,9 @@ set.clipboard = 'unnamedplus'
 vim.diagnostic.config({
 	virtual_text = false
 })
+
+-- Just changing the title of the tabline
+local aeron = "Aeron lab"
+set.showtabline = 2
+set.tabline=aeron
+

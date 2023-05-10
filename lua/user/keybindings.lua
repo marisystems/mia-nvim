@@ -11,9 +11,10 @@ options = { noremap = true }
 -- Highlight dismiss
 map('n', '<leader>c', ':noh<cr>', options)
 
--- Save
-map('n', '<C-s>s', ':w<cr>', options)
-map('n', '<C-s>q', ':wq<cr>', options)
+-- Write
+map('n', '<S-w>W', ':w<cr>', options)
+-- Save and exit
+map('n', '<S-w>Q', ':wq<cr>', options)
 
 -- Repeat last command
 map('n', '<C-p>', ':@:<cr>', options)
@@ -41,3 +42,10 @@ map('n', '<leader>-', ':lua vim.diagnostic.goto_prev()<cr>', {})
 
 -- Mason
 map('n', '<leader>m', ':Mason<cr>', {})
+
+-- Buffers
+map('n', 'tq', ':bprev<CR>', {})
+map('n', 'tp', ':bnext<CR>', {})
+
+-- LuaSnip
+-- vim.keymap.set({ "i", "s" }, "<c-l>", function()

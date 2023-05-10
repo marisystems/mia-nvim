@@ -1,13 +1,13 @@
 langs =
 {
 	'pyright',
-	'rust_analyzer',
 	'clangd',
 	'gopls',
-	'sumneko_lua',
+	'lua_ls',
 	'html',
 	'eslint',
 	'tsserver',
+	'rust_analyzer',
 }
 
 for i, langs in ipairs(langs) do

@@ -1,12 +1,13 @@
-local cmp = require'cmp'
-local lspkind = require'lspkind'
+local cmp = require'cmp'	-- Completion Engine
+local lspkind = require'lspkind'	-- Pretty icons
+local luasnip = require'luasnip'	-- Snip engine
 
 cmp.setup({
 
 	snippet = {
 		-- Specifying the snippet engine
 		expand = function(args)
-			require('luasnip').lsp_expand(args, body)
+			luasnip.lsp_expand(args.body)
 		end,
 	},
 
@@ -14,7 +15,7 @@ cmp.setup({
 		-- completion = cmp.config.window.bordered(),
 		-- documentation = cmp.config.window.bordered(),
 	},
-	
+
 	-- Add your keybindings here
 	mapping = cmp.mapping.preset.insert({
 		['<C-k>'] = cmp.mapping.select_prev_item(),
@@ -25,7 +26,7 @@ cmp.setup({
 		['<C-Space>'] = cmp.mapping.complete(),	
 		['<C-e>'] = cmp.mapping.abort(),
 		['<C-a>'] = cmp.mapping.confirm({ select = true }),
-		
+
 	}),
 
 	-- Configure the formatting of the cmp pop_up window
