@@ -46,6 +46,7 @@ return require('packer').startup(function(use)
 	use 'L3MON4D3/LuaSnip'			-- Snippet engine built on lua
 	use 'saadparwaiz1/cmp_luasnip'	-- Snippet completions for cmp
 
+	use 'elkowar/yuck.vim'
 
 	-- Notifications support
 	use 'rcarriga/nvim-notify'
@@ -66,5 +67,4 @@ return require('packer').startup(function(use)
 	-- Colorscheme
 	use 'cocopon/iceberg.vim'
 	use "rebelot/kanagawa.nvim"
-
 end)
