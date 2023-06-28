@@ -224,6 +224,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/aeron/.local/share/nvim/site/pack/packer/start/windows.nvim",
     url = "https://github.com/anuvyklack/windows.nvim"
+  },
+  ["yuck.vim"] = {
+    loaded = true,
+    path = "/home/aeron/.local/share/nvim/site/pack/packer/start/yuck.vim",
+    url = "https://github.com/elkowar/yuck.vim"
   }
 }
 
