@@ -1,12 +1,13 @@
 -- INIT LUA
-require('user.plugins')
 require('user.settings')
 require('user.keybindings')
+require('user.plugins')
 
 require('user.lsp')
 require('user.cmp')
 require('user.luasnip')
 require('user.mason')
+require('user.dap')
 
 require('user.windows')
 require('user.colorizer')

@@ -5,17 +5,6 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	-- Change pane focus with fancy animations
-	use {"anuvyklack/windows.nvim", requires = {"anuvyklack/middleclass",
-		"anuvyklack/animation.nvim"}
-	}
-
-	-- Status-line
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = {'nvim-tree/nvim-web-devicons', opt = true}
-	}
-
 	-- Terminal emulator
 	use 'akinsho/toggleterm.nvim'
 
@@ -46,14 +35,32 @@ return require('packer').startup(function(use)
 	use 'L3MON4D3/LuaSnip'			-- Snippet engine built on lua
 	use 'saadparwaiz1/cmp_luasnip'	-- Snippet completions for cmp
 
-	use 'elkowar/yuck.vim'
+	--DAP (Debugger adapter Protocol)
+	use 'mfussenegger/nvim-dap'		-- Not quite sure yet what it does
+
+	-- Misc Implementations
+	use 'elkowar/yuck.vim'						-- Used in elkowar EWW yuck language
+	use 'PrestonKnopp/tree-sitter-gdscript'		-- Tree sitter for Godot's Language GDscript
+
+	-- Javascript
+	use 'yuezk/vim-js'					--　I'll probably delete this later
+	use 'maxmellon/vim-jsx-pretty'		-- And this one
+
+
+	-- VISUAL --
+	-- Status-line
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = {'nvim-tree/nvim-web-devicons', opt = true}
+	}
+
+	-- Change pane focus with fancy animations
+	use {"anuvyklack/windows.nvim", requires = {"anuvyklack/middleclass",
+		"anuvyklack/animation.nvim"}
+	}
 
 	-- Notifications support
 	use 'rcarriga/nvim-notify'
-
-	-- Javascript
-	use 'yuezk/vim-js'
-	use 'maxmellon/vim-jsx-pretty'
 
     -- Indent lines
     use 'lukas-reineke/indent-blankline.nvim'

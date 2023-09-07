@@ -23,3 +23,14 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require'lspconfig'.cssls.setup {
 	capabilities = capabilities,
 }
+
+-- GdScript
+local lsp_flags = {
+	debounce_text_changes = 150,
+}
+
+require'lspconfig'.gdscript.setup{
+	flags = lsp_flags,
+	filetypes = { "gd", "gdscript", "gdscript3" },
+}
+
