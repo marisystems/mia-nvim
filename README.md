@@ -1,5 +1,7 @@
 # AeroNvim
 
+# ARCHIVED
+
 ### Dependencies
 - neovim
 - go
