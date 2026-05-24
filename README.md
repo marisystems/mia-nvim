@@ -1,6 +1,4 @@
-# AeroNvim
-
-# ARCHIVED
+# Mia-nvim
 
 ### Dependencies
 - neovim
