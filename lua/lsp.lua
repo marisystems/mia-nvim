@@ -13,7 +13,9 @@ require('mason-tool-installer').setup({
 		"stylua",
     "pyright",
     "clangd",
-    "rust-analyzer"
+    "rust-analyzer",
+    "emmet-language-server",
+    "typescript-language-server"
 	}
 })
 
@@ -29,9 +31,9 @@ local function lsp_on_attach(ev)
 	local bufnr = ev.buf
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
-	vim.keymap.set("n", "<leader>ld", function()
-		require("fzf-lua").lsp_definitions({ jump_to_single_result = true })
-	end, {desc = "[LSP] Jump to Definition"})
+	vim.keymap.set("n", "<leader>ld",
+    ':Telescope lsp_definitions<cr>',
+    {desc = "[LSP] Jump to Definition"})
 
 	vim.keymap.set("n", "<leader>lD", vim.lsp.buf.definition, {desc = "[LSP] List all definitions"})
 
@@ -59,7 +61,8 @@ local function lsp_on_attach(ev)
 		vim.diagnostic.jump({ count = -1 })
 	end, {desc = "[LSP] Jump to earlier diagnostic"})
 
-	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+	vim.keymap.set("n", "K", vim.lsp.buf.hover, {desc = "Open Hover LSP"})
+    vim.keymap.set("i", "<C-k>", vim.lsp.buf.hover, {desc = "Open Hover LSP"})
 
 	vim.keymap.set("n", "<leader>fr", function()
 		require("fzf-lua").lsp_references()
@@ -93,7 +96,9 @@ end
 
 vim.api.nvim_create_autocmd("LspAttach", { group = augroup, callback = lsp_on_attach })
 
--- Optional config below, makes vim API auto complete
+-- Optional config below
+
+-- Vim config,makes vim API auto complete
 vim.lsp.config("lua_ls", {
   root_markers = {'.lua'},
   settings = {
@@ -109,6 +114,12 @@ vim.lsp.config("lua_ls", {
       }
     }
   }
+})
 
+-- Make clangd adhere to C23 standard
+vim.lsp.config("clangd", {
+    init_options = {
+        fallbackFlags = { '--std=c23'}
+    },
 })
 

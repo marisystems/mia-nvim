@@ -18,16 +18,13 @@ map("n", "<leader>c", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 map("n", "<leader>e", ":lua MiniFiles.open()<cr>", { desc = "Open file picker"})
 
 -- Easier saving
-map("n", "<S-w>", ":w<cr>", {desc = "Save file"})
-map("n", "<S-q>", ":wq<cr>", {desc = "Save and quit file"})
+map("n", "<leader>w", ":w<cr>", {desc = "Save file"})
+map("n", "<leader>wq", ":wq<cr>", {desc = "Save and quit file"})
 
 map("n", "<C-p>", ":@:<cr>", {desc = "Repeat last command line"})
 
--- Telescope commands
-map('n', '<leader>tf', ':Telescope find_files<cr>', { desc = "Telescope] Find files" })
-map('n', '<leader>tg', ':Telescope live_grep<cr>', { desc = "[Telescope] Live grep" })
-map('n', '<leader>tb', ':Telescope buffers<cr>', { desc = "[Telescope] List buffers" })
-map('n', '<leader>th', ':Telescope help_tags<cr>', { desc = "[Telescope] Navigate help" })
+
+map('n', '<leader>q', ':bd <cr>', {desc = "Close buffer"})
 
 map('n', '<leader>m', ':Mason<cr>', {desc = "Mason"})
 

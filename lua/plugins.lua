@@ -14,7 +14,7 @@ vim.pack.add({
   'https://github.com/akinsho/toggleterm.nvim',
   'https://github.com/rebelot/kanagawa.nvim',
   'https://github.com/j-hui/fidget.nvim',
-  'https://github.com/brianhuster/live-preview.nvim'
+  'https://github.com/brianhuster/live-preview.nvim',
 })
 
 -- Live preview
@@ -34,9 +34,6 @@ require("which-key").setup({
 
 -- Notifications
 require("fidget").setup()
-
--- Telescope
-require("telescope").setup()
 
 -- Mini
 require("mini.ai").setup({})
@@ -71,6 +68,8 @@ require("nvim-treesitter").install{
     'javascript',
     'json',
     'bash',
+    'php',
+    'fish'
 }
 
 -- CMP

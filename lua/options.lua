@@ -12,9 +12,9 @@ vim.opt.wrap = false -- don't wrap lines automatically
 vim.opt.scrolloff = 10 -- keep 10 lines above & below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right cursor
 
-vim.opt.tabstop = 2 -- tabwidth
-vim.opt.shiftwidth = 2 -- indent width
-vim.opt.softtabstop = 2 -- soft tab stop
+vim.opt.tabstop = 4 -- tabwidth
+vim.opt.shiftwidth = 4 -- indent width
+vim.opt.softtabstop = 4 -- soft tab stop
 vim.opt.expandtab = true -- use spaces instead of tabs
 vim.opt.smartindent = true -- smart auto-indent
 vim.opt.autoindent = true -- copy indent from current line
