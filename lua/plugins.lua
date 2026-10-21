@@ -1,20 +1,19 @@
 -- Add plugins
 vim.pack.add({
-  'https://github.com/vyfor/cord.nvim',
-  'https://github.com/nvim-telescope/telescope.nvim',
-  'https://github.com/nvim-lua/plenary.nvim', -- For telescope
-  'https://github.com/nvim-tree/nvim-web-devicons',
-  'https://github.com/nvim-mini/mini.nvim',
-  'https://github.com/lewis6991/gitsigns.nvim',
-  'https://github.com/nvim-treesitter/nvim-treesitter',
-  'https://github.com/saghen/blink.lib',
-  'https://github.com/saghen/blink.cmp',
-  'https://github.com/ibhagwan/fzf-lua',
-  'https://github.com/folke/which-key.nvim',
-  'https://github.com/akinsho/toggleterm.nvim',
-  'https://github.com/rebelot/kanagawa.nvim',
-  'https://github.com/j-hui/fidget.nvim',
-  'https://github.com/brianhuster/live-preview.nvim',
+    'https://github.com/vyfor/cord.nvim', -- Silly
+    'https://github.com/nvim-telescope/telescope.nvim',
+    'https://github.com/nvim-lua/plenary.nvim', -- For telescope
+    'https://github.com/nvim-tree/nvim-web-devicons',
+    'https://github.com/nvim-mini/mini.nvim',
+    'https://github.com/lewis6991/gitsigns.nvim',
+    'https://github.com/nvim-treesitter/nvim-treesitter',
+    'https://github.com/ibhagwan/fzf-lua',
+    'https://github.com/folke/which-key.nvim',
+    'https://github.com/rebelot/kanagawa.nvim',
+    'https://github.com/j-hui/fidget.nvim', -- Very pretty
+    'https://github.com/brianhuster/live-preview.nvim',
+    'https://github.com/goropikari/lua-repl.nvim',
+    'https://github.com/NStefan002/screenkey.nvim',
 })
 
 -- Live preview
@@ -72,13 +71,4 @@ require("nvim-treesitter").install{
     'fish'
 }
 
--- CMP
-local cmp = require('blink.cmp')
-cmp.build():pwait()
-cmp.setup()
-
--- Floating terminal
-require("toggleterm").setup({
-
-})
-
+require("lua-repl").setup()

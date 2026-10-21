@@ -5,6 +5,8 @@ local map = vim.keymap.set
 
 require("telescope").setup({
   defaults = {
+    -- Make telescope start on normal mode
+    initial_mode = 'normal',
     mappings = {
       i = {
         ["<c-d>"] = actions.delete_buffer,

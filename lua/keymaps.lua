@@ -19,7 +19,7 @@ map("n", "<leader>e", ":lua MiniFiles.open()<cr>", { desc = "Open file picker"})
 
 -- Easier saving
 map("n", "<leader>w", ":w<cr>", {desc = "Save file"})
-map("n", "<leader>wq", ":wq<cr>", {desc = "Save and quit file"})
+map("n", "<leader>W", ":wq<cr>", {desc = "Save and quit file"})
 
 map("n", "<C-p>", ":@:<cr>", {desc = "Repeat last command line"})
 
@@ -66,4 +66,19 @@ map("n", "<leader>td", function()
 	vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { desc = "Toggle diagnostics" })
 
+-- Goto-preview
+map("n", "<leader>ll", function()
+    local params = vim.lsp.util.make_position_params(0, 'utf-32')
+    return vim.lsp.buf_request(0,
+        "textDocument/definition",
+        params,
+        function(_, result)
+            if result  == nil or vim.tbl_isempty(result) then return end
+            vim.lsp.util.preview_location(result[1], {border = "rounded"})
+        end)
+end, {desc = "[Goto] definition"})
 
+-- Restart
+map("n", "<leader>rr", ":restart<cr>", { desc = "Restart"})
+map("n", "<leader>rl", ":luafile %<cr>", { desc = "Run current lua file"})
+map("n", "<leader>rL", ":luafile %<cr>", { desc = "Run current lua in a split"})
